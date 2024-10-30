@@ -54,6 +54,8 @@ docker-compose up --build
 
 Посмотрим Базу данных (Нажмём `Show Database`)
 ![database.png](images/database.png)
+Проверим на нескольких машинах (Debian, Ubuntu)
+![db_many.png](images/database_2.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Эта табличка реализована так, что скролинг происходит только наполнения таблицы, сами заголовки неподвижны.
 
 Так же реализовано окно ошибок
