@@ -3,7 +3,7 @@
 # Запуск
 
 - Склонировать проект
-- Запустить
+- Запустить из папки `maxpatrol/`
 
 ```shell
 docker-compose up --build
