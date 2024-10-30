@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scan Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Scan Initiated</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Scanning IP</th>
+                <td>{{ ip }}</td>
+            </tr>
+            <tr>
+                <th>Port</th>
+                <td>{{ port }}</td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td>{{ username }}</td>
+            </tr>
+            <tr>
+                <th>OS</th>
+                <td>{{ os }}</td>
+            </tr>
+            <tr>
+                <th>Version</th>
+                <td>{{ version }}</td>
+            </tr>
+            <tr>
+                <th>Architecture</th>
+                <td>{{ architecture }}</td>
+            </tr>
+        </table>
+        <a href="{{ url_for('index') }}">Start New Scan</a>
+    </div>
+</body>
+</html>

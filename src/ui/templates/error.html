@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ERROR</h1>
+        <p>{{ error }}</p>
+        <a href="{{ url_for('index') }}">Start New Scan</a>
+    </div>
+</body>
+</html>

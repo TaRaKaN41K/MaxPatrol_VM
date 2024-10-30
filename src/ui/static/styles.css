@@ -1,0 +1,215 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif; /* Шрифт для текста на странице */
+    background-color: #f0f4f8; /* Цвет фона */
+    color: #333; /* Основной цвет текста */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Центрирование содержимого */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Полная высота экрана */
+}
+/* Контейнер для всей формы и заголовка */
+.container {
+    text-align: center; /* Центрирование текста внутри контейнера */
+}
+
+/* Контейнер формы */
+form {
+    background-color: #ffffff; /* Цвет фона формы */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 20px 30px; /* Внутренние отступы */
+    width: 300px; /* Ширина формы */
+    margin: 0 auto; /* Центрирование формы */
+}
+
+/* Заголовок */
+h1 {
+    color: #333; /* Цвет текста заголовка */
+    font-size: 24px; /* Размер шрифта заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+    text-align: center; /* Центрирование текста заголовка */
+}
+
+/* Стили для меток и полей ввода */
+label {
+    font-weight: bold; /* Жирный текст */
+    display: block;
+    text-align: left; /* Выравнивание текста метки по левому краю */
+    margin-bottom: 5px; /* Отступ снизу */
+    color: #555; /* Цвет текста метки */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Ширина поля ввода */
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 15px; /* Отступ снизу */
+    border: 1px solid #ddd; /* Граница */
+    border-radius: 4px; /* Закругленные углы */
+    box-sizing: border-box;
+    font-size: 16px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+}
+
+/* Стиль кнопки отправки */
+button[type="submit"] {
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: #ffffff; /* Цвет текста кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Закругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    width: 100%; /* Ширина кнопки */
+    transition: background-color 0.3s; /* Плавное изменение цвета при наведении */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Цвет фона кнопки при наведении */
+}
+
+/* Контейнер для результатов */
+.results-container {
+    background-color: #ffffff; /* Цвет фона */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 20px 30px; /* Внутренние отступы */
+    width: 300px; /* Ширина */
+    text-align: center; /* Центрирование текста */
+}
+
+/* Стили для текста */
+p {
+    margin: 10px 0; /* Отступ сверху и снизу */
+    font-size: 16px; /* Размер шрифта */
+}
+
+/* Стили для ссылки */
+a {
+    margin-top: 20px; /* Отступ сверху */
+    display: inline-block;
+    background-color: #007bff; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+    border: none; /* Без границы */
+    border-radius: 4px; /* Закругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 16px; /* Размер шрифта */
+    transition: background-color 0.3s; /* Плавное изменение цвета при наведении */
+}
+
+a:hover {
+    background-color: #0056b3; /* Цвет фона ссылки при наведении */
+}
+/* Индикатор загрузки */
+#loading {
+    display: none; /* Скрыт по умолчанию */
+    position: fixed;
+    left: 50%;
+    bottom: 20px; /* Расположение снизу */
+    transform: translateX(-50%); /* Центрирование по горизонтали */
+    z-index: 1000;
+    width: 80%; /* Ширина полосы загрузки */
+    max-width: 400px; /* Максимальная ширина */
+}
+
+.progress {
+    width: 100%;
+    height: 20px; /* Высота полосы */
+    background-color: #f3f3f3; /* Цвет фона */
+    border-radius: 10px; /* Закругление углов */
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff; /* Цвет полосы прогресса */
+    width: 0; /* Начальная ширина */
+    transition: width 0.5s; /* Анимация изменения ширины */
+}
+
+/* Текст под индикатором */
+#loading p {
+    text-align: center;
+    margin-top: 5px;
+    color: #333; /* Цвет текста */
+}
+
+/* Контейнер таблицы */
+.table-container {
+    max-height: 400px; /* Ограничение высоты таблицы */
+    overflow-y: auto; /* Вертикальная прокрутка */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+}
+/* Общие стили для таблицы */
+table {
+    width: 300px; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем промежутки между ячейками */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень */
+    background-color: #fff; /* Цвет фона */
+    border-radius: 8px; /* Закругленные углы */
+    margin: 20px 0; /* Отступ сверху и снизу */
+}
+
+/* Заголовки таблицы */
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #007bff; /* Цвет фона заголовков */
+    color: white; /* Цвет текста заголовков */
+    z-index: 1;
+    padding: 12px 15px; /* Внутренние отступы */
+    text-align: left; /* Выравнивание текста по левому краю */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    border-bottom: 2px solid #e0e0e0; /* Граница снизу */
+}
+
+
+/* Ячейки с данными */
+tbody td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+        color: #333; /* Цвет текста */
+    padding: 12px 15px; /* Внутренние отступы */
+    border-bottom: 1px solid #ddd; /* Граница снизу */
+    font-size: 14px; /* Размер шрифта */
+}
+
+/* Строка при наведении */
+tbody tr:hover {
+    background-color: #f1f1f1; /* Цвет фона строки при наведении */
+}
+
+tr:hover td {
+    background-color: #f1f5ff; /* Цвет фона при наведении на строку */
+}
+
+/* Стили для чередующихся строк */
+tr:nth-child(even) td {
+    background-color: #f1f1f1; /* Цвет фона для четных строк */
+}
+
+/* Кнопка для добавления элементов */
+button.add-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.add-button:hover {
+    background-color: #0056b3; /* Цвет при наведении */
+}

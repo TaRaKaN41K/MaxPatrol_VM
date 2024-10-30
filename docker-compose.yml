@@ -1,0 +1,39 @@
+networks:
+  app_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+          gateway: 172.30.0.1
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: maxpatrol_vm
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+    networks:
+      app_network:
+        ipv4_address: 172.30.0.3
+
+  web:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "5005:5000"
+    depends_on:
+      - db
+    networks:
+      app_network:
+        ipv4_address: 172.30.0.2
+volumes:
+  db_data:
